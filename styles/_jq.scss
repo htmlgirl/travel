@@ -1,0 +1,326 @@
+
+.city-search-result-l-i-link {
+	display: block;
+	margin-left: 0;
+	padding: 10px 10px 10px 12px;
+	&:hover {
+		text-decoration: none;
+	}
+	&:hover .city-info-name {
+		text-decoration: underline;
+	}
+}
+.city-info {
+	padding: 5px 0;
+}
+.city-info-abbreviation {
+	float: right;
+	color: #333;
+	font-size: 14px;
+}
+.city-info-name {
+	padding: 0 10px 0 20px;
+}
+.city-info-airport {
+	color: #333;
+}
+.country-name {
+	color: #a7a6a6;
+	padding: 0 0 0 20px;
+	text-decoration: none;
+	font-size: 13px;
+}
+.ui-widget-content {
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	color: #333333;
+	z-index: 10 !important;
+	border-bottom: 3px solid #ccc;
+	box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.ui-autocomplete {
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: default;
+	width: 367px !important;
+	border-radius: 4px;
+}
+
+.ui-datepicker-multi-2 .ui-datepicker-group {
+	width: 44%;
+}
+.ui-datepicker-group-first {
+	margin: 0 1% 0 5%;
+}
+.ui-datepicker-group-last {
+	margin: 0 5% 0 1%;
+}
+.ui-datepicker .ui-datepicker-header {
+	position: relative;
+	padding: .2em 0;
+}
+
+/*------------------------------------------------kalendar------------------------------*/
+.ui-datepicker .ui-icon {
+	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	left: .5em;
+	top: .3em;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+	float: left;
+}
+.ui-datepicker td {
+	border: 0;
+	padding: 0;
+}
+.ui-datepicker td span,
+.ui-datepicker td a {
+	display: block;
+	padding: 0;
+	text-align: right;
+	text-decoration: none;
+	margin: 0 2px;
+}
+.ui-datepicker table {
+	width: 100%;
+	font-size: 14px;
+	border-collapse: collapse;
+	margin: 0;
+	line-height: 25px;
+}
+
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	border: 0;
+	background: #fff;
+	font-weight: normal;
+	color: #3e77aa;
+	text-align: center;
+	&:hover {
+		background: #ccc;
+		color: #fff;
+	}
+}
+.ui-state-disabled .ui-state-default {
+	color: #ccc;
+}
+.ui-state-disabled:hover .ui-state-default {
+	background: #fff;
+	color: #ccc;
+}
+.ui-datepicker .ui-state-active {
+	background: #329a1c;
+	color: #fff;
+}
+.mydatepicker {
+	width: 482px !important;
+	height: auto;
+	padding: 22px 0;
+	border-radius: 5px;
+	box-sizing: border-box;
+	.ui-datepicker-title {
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+	}
+}
+
+.ui-datepicker th {
+	padding: .7em .3em;
+	text-align: center;
+	font-weight: normal;
+	border: 0;
+	color: #329a1c;
+	font-size: 12px;
+	line-height: 16px;
+	text-align: center;
+}
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next {
+	position: absolute;
+	top: 4px;
+	width: 21px;
+	height: 21px;
+	background: #dee0e2;
+	border-radius: 21px;
+	cursor: pointer;
+}
+.ui-datepicker .ui-datepicker-prev:hover,
+.ui-datepicker .ui-datepicker-next:hover {
+	background: #9799a1;
+}
+.ui-datepicker .ui-datepicker-prev {
+	left: 2px;
+}
+.ui-datepicker .ui-datepicker-next {
+	right: 2px;
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+	display: block;
+	position: absolute;
+	margin-left: -8px;
+	margin-top: -8px;
+	background: transparent;
+	z-index: 3;
+	width: 7px;
+	height: 7px;
+	border: 2px solid #fff;
+	border-left: 0;
+	border-bottom: 0;
+	top: 64%;
+
+}
+.ui-datepicker .ui-datepicker-prev span {
+	transform: rotate(-140deg);
+	left: 70%;
+}
+.ui-datepicker .ui-datepicker-next span {
+	transform: rotate(45deg);
+	left: 56%;
+}
+.ui-datepicker-header .ui-state-disabled {
+	cursor: default;
+	background: #f1f1f3;
+	&:hover {
+		background: #f1f1f3;
+	}
+}
+.ui-datepicker-prev ~ .ui-datepicker-title {
+	text-align: right;
+	margin: 0 9px 0 2.3em;
+}
+.ui-datepicker-next ~ .ui-datepicker-title {
+	text-align: left;
+	margin: 0 2.3em 0 9px;
+}
+.ui-widget-content .ui-state-highlight {
+	border: 0;
+	background: #a0ef98;
+	color: #fff;
+	&:hover {
+		background: #ccc;
+		color: #fff;
+	}
+}
+.ui-widget-content .ui-state-hover {
+	background: #4bbe3f;
+}
+/*--------------------------------------bilet---------------------------------------------*/
+.ui-selectmenu-menu {
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.ui-selectmenu-open {
+	display: block;
+	border-top: 5px solid transparent;
+}
+.ui-selectmenu-button.ui-button {
+	text-align: left;
+	white-space: nowrap;
+	width: 60px;
+	padding: 7px 12px;
+	border-radius: 3px;
+	box-shadow: inset 3px 3px 1px 0 #eeeeef;
+	font-size: 16px;
+	line-height: 20px;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.ui-state-default,
+.ui-button {
+	border: 1px solid #c5c5c5;
+	background: #fff;
+	font-weight: normal;
+	color: #454545;
+}
+.ui-button {
+	padding: .4em 1em;
+	display: inline-block;
+	position: relative;
+	line-height: normal;
+	margin-right: .1em;
+	cursor: pointer;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	overflow: visible;
+}
+.ui-menu .ui-menu-item-wrapper {
+	position: relative;
+	padding: 4px 1em 4px 13px;
+	font-size: 15px;
+	line-height: 20px;
+	border-bottom: 1px solid #f2f2f3;
+	color: #3e77aa;
+	box-sizing: border-box;
+	margin-left: 0;
+}
+.ui-menu .ui-menu-item:first-child .ui-menu-item-wrapper {
+	border-radius: 4px 4px 0 0;
+}
+.ui-menu .ui-menu-item:last-child .ui-menu-item-wrapper {
+	border-radius: 0 0 4px 4px;
+}
+.ui-selectmenu-dropdown {
+	border: 1px solid #a8cbeb;
+}
+.ui-selectmenu-dropdown .ui-menu-item-wrapper {
+	padding: 5px 1em 5px 9px;
+	margin-left: 4px;
+}
+.ui-selectmenu-menu .ui-menu {
+	overflow: auto;
+	overflow-x: hidden;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+.ui-state-active:hover {
+	background: #fcfcee;
+	color: #fb3f4c;
+}
+.ui-state-active:active {
+	color: #9cf;
+	background: #f8f8f8;
+}
+
+.ui-menu .ui-menu-item {
+	margin: 0;
+	cursor: pointer;
+}
+
+.ui-selectmenu-button {
+	outline: none;
+}
+.ui-selectmenu-button:before {
+	position: absolute;
+	content:"";
+	width: 14px;
+	height: 10px;
+	z-index: 1;
+	background: url("../images/arrow.jpg");
+	bottom: 13px;
+	right: 7px;
+	pointer-events:none;
+}
+.ui-selectmenu-button:hover {
+	&:before {
+		background: url("../images/select-arrow-bottom-hover.png");
+	}
+}
+.ui-selectmenu-button:active {
+	&:before {
+		background: url("../images/select-arrow-bottom-active.png");
+	}
+}

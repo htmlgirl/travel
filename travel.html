@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rozetka.ua</title>
+	<meta charset="utf-8">
+	<link href="https://rozetka.com.ua/header.css" type="text/css" rel="stylesheet">
+	<link href="https://rozetka.com.ua/footer.css" type="text/css" rel="stylesheet">
+	<link href="https://rozetka.com.ua/style.css" type="text/css" rel="stylesheet">
+	<link href="https://rozetka.com.ua/scripts/assets/css/head-suggest-20f6f9a27e78b1dbb229c71430a289d0.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles/travelstyle.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$( function() {
+			$( "#datepicker1" ).datepicker({
+				numberOfMonths: 2,
+				dateFormat: "d M",
+				minDate: new Date(),
+				firstDay: 1,
+				showButtonPanel: false,
+				monthNamesShort: ["Января","Февраля","Марта","Апреля","Мая","Июня","Июля","Августа","Сентября","Октября","Ноября","Декабря"],
+				monthNames: ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
+				dayNames: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+				dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+				beforeShow: function() {
+					if (!$('#ui-datepicker-div').hasClass('mydatepicker')) {
+						$('#ui-datepicker-div').addClass('mydatepicker');
+					}
+				}
+			});
+		} );
+	</script>
+	<script>
+		$( function() {
+			$( "#datepicker2" ).datepicker({
+				numberOfMonths: 2,
+				dateFormat: "d M",
+				minDate: new Date(),
+				firstDay: 1,
+				showButtonPanel: false,
+				monthNamesShort: ["Января","Февраля","Марта","Апреля","Мая","Июня","Июля","Августа","Сентября","Октября","Ноября","Декабря"],
+				monthNames: ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"],
+				dayNames: ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"],
+				dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+				beforeShow: function() {
+					if (!$('#ui-datepicker-div').hasClass('mydatepicker')) {
+						$('#ui-datepicker-div').addClass('mydatepicker');
+					}
+				}
+			});
+		} );
+	</script>
+	<script>
+		$(function() {
+			var base = [
+					{ label: "Рим", abbr: "ROM", airport: "Все аэропорты", country: "Италия" },
+					{ label: "Рим", abbr: "CIA", airport: "Ciampio", country: "Италия" },
+					{ label: "Рим", abbr: "FCO", airport: "Фьюмичино", country: "Италия" },
+					{ label: "Гримсби", abbr: "GSY", airport: "Binbrook", country: "Великобритания" },
+					{ label: "Римини", abbr: "RMI", airport: "", country: "Италия" }
+				],
+				params = {source: base},
+				renderItem = function( ul, item ) {
+
+					if (!$(ul).hasClass('city-search-result-l')) {
+						$(ul).addClass('city-search-result-l');
+					}
+
+					return $( "<li class='city-search-result-l-i'>" )
+						.append( "<a href='#' class='novisited city-search-result-l-i-link' onclick='return false;'>" +
+							"<div class='clearfix city-info'>" +
+							"<span class='city-info-abbreviation'>" + item.abbr + "</span>" +
+							"<span class='city-info-name'>" + item.label + "</span>" +
+							"<span class='city-info-airport'>" + item.airport + "</span>" +
+							"</div>" +
+							"<div class='country-name'>" + item.country + "</div>" +
+							"</a>" )
+						.appendTo( ul );
+				};
+
+			$('#tags1').autocomplete(params).data("ui-autocomplete")._renderItem = renderItem;
+			$('#tags2').autocomplete(params).data("ui-autocomplete")._renderItem = renderItem;
+		} );
+	</script>
+	<script>
+		$( function() {
+			$( "#number1" )
+				.selectmenu()
+				.selectmenu( "menuWidget" )
+				.addClass( "ui-selectmenu-dropdown" );
+			$( "#number2" )
+				.selectmenu()
+				.selectmenu( "menuWidget" )
+				.addClass( "ui-selectmenu-dropdown" );
+			$( "#number3" )
+				.selectmenu()
+				.selectmenu( "menuWidget" )
+				.addClass( "ui-selectmenu-dropdown" );
+		} );
+	</script>
+
+</head>
+<body>
+<div class="body-banner-wrap" name="body-banner">
+	<div id="banner-application"></div>
+
+	<div class="aligned-center small-banner" id="stretch_banner" style="border-bottom: 0px;">
+		<div id="head_banner" class="small-banner-inner visual7days"> <a name="head_banner" href="https://rozetka.com.ua/defenderdaygifts/" target="_blank" style="background:#F4F2DA" class="responsive-img"> <img src="https://i1.rozetka.ua/owoxads/2/2891.jpg" width="990" height="30" alt="defenderdaygifts2017"> </a> </div>
+		<div class="banner-close small-banner-close hidden" id="head_banner_close_block" name="head_banner_close_block">
+			<a href="#" class="banner-close-link" id="head_banner_close">
+				<img src="https://i.rozetka.ua/design/_.gif" width="28" height="28" alt="Закрыть" title="Закрыть" class="sprite banner-close-link-icon">
+			</a>
+		</div>
+	</div>
+	<div id="banner-search"></div>
+</div>
+<header class="body-header" id="body-header" role="banner">
+	<div class="body-layout">
+		<div class="wrap">
+			<div class="clearfix body-header-row-top">
+				<div class="header-user" id="user_menu_container">
+					<div class="header-user-popup" id="social_popup"></div>
+					<div id="user_menu"><span class="header-user-pre-title">Здравствуйте,&nbsp;</span>  <span id="header_user_menu_parent" name="splash-button" class="header-user-title">     <a href="https://my.rozetka.com.ua/" name="profile" class="header-user-link sprite-side whitelink xhr">Татьяна</a>
+						<ul id="header_user_menu" name="splash-popup" class="header-popup header-popup-header-user hidden">        <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="personal-information" href="https://my.rozetka.com.ua/profile/personal-information/">Личные данные</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="wishlists" href="https://my.rozetka.com.ua/profile/wishlists/">Списки желаний</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="cart" href="https://my.rozetka.com.ua/profile/cart/">Корзина</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="waitlist" href="https://my.rozetka.com.ua/profile/waitlist/">Лист ожидания</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="account" href="https://my.rozetka.com.ua/profile/account/" onclick="document.fireEvent('profileMenu', {extend_event: [{name:'eventContent', value:'Мои заказы'}]});">Мои заказы</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="reviews" href="https://my.rozetka.com.ua/profile/reviews/" onclick="document.fireEvent('profileMenu', {extend_event: [{name:'eventContent', value:'Мои отзывы'}]});">Мои отзывы</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="recently-viewed" href="https://my.rozetka.com.ua/profile/recently-viewed/" onclick="document.fireEvent('profileMenu', {extend_event: [{name:'eventContent', value:'Просмотренные товары'}]});">Просмотренные товары</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="subscribes" href="https://my.rozetka.com.ua/profile/subscribes/" onclick="document.fireEvent('profileMenu', {extend_event: [{name:'eventContent', value:'Рассылки'}]});">Рассылки</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="promotions" href="https://my.rozetka.com.ua/profile/promotions/" onclick="document.fireEvent('profileMenu', {extend_event: [{name:'eventContent', value:'Участие в акциях'}]});">Участие в акциях</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="clubs" href="https://my.rozetka.com.ua/profile/clubs/" onclick="document.fireEvent('profileMenu', {extend_event: [{name:'eventContent', value:'Мои клубы'}]});">Мои клубы</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="message" href="https://my.rozetka.com.ua/profile/market/message/" onclick="document.fireEvent('profileMenu', {extend_event: [{name:'eventContent', value:'Моя переписка'}]});">Моя переписка</a> </li>         <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited" name="bonus" href="https://my.rozetka.com.ua/profile/bonus/" onclick="document.fireEvent('profileMenu', {extend_event: [{name:'eventContent', value:'Мой бонусный счет'}]});">Мой бонусный счет</a> </li>            <li class="header-popup-header-user-i"> <a class="header-popup-header-user-i-link sprite-side novisited xhr" name="signout" href="https://my.rozetka.com.ua/signout/" onclick="document.fireEvent('profileMenu', {extend_event: [{name:'eventContent', value:'Выход'}]});">Выход</a> </li>  </ul>          </span></div>
+					<script>window['MenuUser'] && MenuUser.setOptions({nodes_data: {'profile': { "title": '', "href": "https://my.rozetka.com.ua/" },'personal-information': { "title": "Личные данные", "href": "https://my.rozetka.com.ua/profile/personal-information/" },'wishlists': { "title": "Списки желаний", "href": "https://my.rozetka.com.ua/profile/wishlists/" },'cart': { "title": "Корзина", "href": "https://my.rozetka.com.ua/profile/cart/" },'waitlist': { "title": "Лист ожидания", "href": "https://my.rozetka.com.ua/profile/waitlist/" },'account': { "title": "Мои заказы", "href": "https://my.rozetka.com.ua/profile/account/" },'reviews': { "title": "Мои отзывы", "href": "https://my.rozetka.com.ua/profile/reviews/" },'recently-viewed': { "title": "Просмотренные товары", "href": "https://my.rozetka.com.ua/profile/recently-viewed/" },'subscribes': { "title": "Рассылки", "href": "https://my.rozetka.com.ua/profile/subscribes/" },'promotions': { "title": "Участие в акциях", "href": "https://my.rozetka.com.ua/profile/promotions/" },'clubs': { "title": "Мои клубы", "href": "https://my.rozetka.com.ua/profile/clubs/" },'market_stub': { "title": "Моя переписка", "href": "https://my.rozetka.com.ua/profile/market_stub/message/" },'message': { "title": "Моя переписка", "href": "https://my.rozetka.com.ua/profile/market/message/"},'bonus-account': { "title": "Мой бонусный счет", "href": "https://my.rozetka.com.ua/profile/bonus-account/" },'bonus': { "title": "Мой бонусный счет", "href": "https://my.rozetka.com.ua/profile/bonus/" },'signout': { "title": "Выход", "href": "https://my.rozetka.com.ua/signout/" }}}).init('user_menu');App.getServiceDelay('marketSellerMenuDS').then(function (service) {service.onDataReady(function () {MenuUser.update();});});window['User'] && User.setPopupParent();</script><div id="user-popup-parent16639"></div>
+				</div>
+				<div name="content-header-phones" class="flex m-top-whithout-phones">
+					<div id="language-switcher" class="lang-switcher clearfix"> <div class="lang-switcher-i">  <span class="lang-switcher-link active">ru</span>  </div>  <div class="lang-switcher-i">  <a href="https://rozetka.com.ua/ua/22096733/p22096733/comments/" rel="nofollow" data-lang="ua" data-langnp="ua" class="lang-switcher-link whitelink">ua</a>  </div> </div>
+					<ul class="m-top" name="header-top-menu">  <li class="m-top-i">  <a href="https://rozetka.com.ua/faq/" class="whitelink"> Вопросы и ответы </a>  </li>  <li class="m-top-i">  <a href="https://rozetka.com.ua/credit/" class="whitelink"> Кредит </a>  </li>  <li class="m-top-i">  <a href="https://rozetka.com.ua/payments-and-deliveries/" class="whitelink"> Доставка и оплата </a>  </li>  <li class="m-top-i">  <a href="https://rozetka.com.ua/warranty/" class="whitelink"> Гарантия </a>  </li>  <li class="m-top-i">  <a href="https://rozetka.com.ua/contacts/" class="whitelink"> Контакты </a>  </li>  <li class="m-top-i">  <a href="https://my.rozetka.com.ua/profile/account/#details" class="order-tracking sprite-side whitelink" id="status_orders"> Отследить заказ </a>  </li> <li class="m-top-i">  <a href="https://rozetka.com.ua/newseller/" class="whitelink"> Продавать на Розетке </a>  </li></ul>
+				</div>
+			</div>
+			<div class="clearfix body-header-row-bottom">
+				<div class="logo">
+					<a href="https://rozetka.com.ua/" class="logo-link">
+						<img src="https://i1.rozetka.ua/logos/0/99.png" width="201" height="51" alt="Интернет магазин Rozetka.ua™ - №1" title="Интернет магазин Rozetka.ua™ - №1">
+					</a><div style="display: none;"><a href="drtzxcustx.html" id="zwbscxsrb" rel="file">vrxcztbx</a></div>
+				</div>
+				<div class="header-city-select">
+					<div class="header-city-select-title">Город</div>
+					<div class="header-city-select-inner" id="city-chooser"><a href="#" class="header-city-select-link sprite-side whitelink" name="city" onclick="document.fireEvent('clickToPopupCity', {extend_event: [{name:'userCityId', value: 28}]});"> <span class="xhr bold">Днепр</span> </a> <div name="popup" class="popup-css header-city-popup hidden"></div></div>
+				</div>
+				<div class="rz-header-search-wrap" id="rz-search">
+					<form name="rz-search-form" class="rz-header-search" method="get" action="https://rozetka.com.ua/search/" data-empty_text_placeholder="Введите поисковый запрос" data-secure-csrf="0">
+						<input type="hidden" name="section_id" value="">
+						<div class="rz-header-search-inner">
+							<input type="hidden" name="section" value="">
+							<div class="rz-header-search-category">
+								<a href="#" name="rz-search-category" class="sprite-side novisited rz-header-search-category-link">
+									<span name="rz-search-category-value" class="xhr">
+										По&nbsp;всем категориям
+									</span>
+								</a>
+								<ul name="rz-search-category-list" class="rz-header-search-category-l hidden">
+									<li name="rz-search-category-list-item" class="rz-header-search-category-l-i active">
+										<a href="#" class="rz-header-search-category-l-i-link sprite-side novisited">По&nbsp;всем категориям</a>
+									</li>
+								</ul>
+							</div>
+							<div name="rz-header-search-input-text-wrap" class="rz-header-search-input-text-wrap sprite-side">
+								<input autocomplete="off" type="text" name="text" class="rz-header-search-input-text passive" placeholder="Поиск" tabindex="1">
+							</div>
+						</div>
+						<span class="rz-search-button-go-link">
+							<span class="btn-link btn-link-green">
+								<button name="rz-search-button" class="btn-link-i" type="submit">Найти</button>
+							</span>
+						</span>
+						<div class="pos-fix rz-header-search-suggest-container" name="rz-header-search-suggest-container"><div style="position: absolute; width: 100%;"></div><div style="position: absolute; width: 100%; display: none;"></div></div>
+					</form>
+				</div>
+
+				<ul class="header-user-buttons">
+					<li class="hub-i hub-i-cart" id="cart_popup_header">
+						<div name="splash-popup" id="cart-popup-block" class="header-popup-cart-check hidden"></div>
+						<div name="splash-button">
+							<div id="cart_block68611">
+								<a class="hub-i-link hub-i-cart-link-count sprite-side whitelink" href="https://my.rozetka.com.ua/cart/" onclick="document.fireEvent('openCart', {extend_event: [{name: 'eventLocation', value: 'Head'}]});"> <span class="xhr">Корзина</span> <span class="hub-i-count">1</span> </a>
+							</div>
+						</div>
+					</li>
+
+					<li class="hub-i hub-i-wishlist" id="wishlist-header">
+						<div name="splash-button" id="wishlist" onclick="document.fireEvent('clickWishlistHeader');">  <a href="https://my.rozetka.com.ua/profile/wishlists/" class="hub-i-link hub-i-wishlist-link-count sprite-side whitelink"> <span class="underline-hover">Желания</span> <span class="hub-i-count">12</span> </a> </div>
+						<div name="splash-popup" class="header-popup-wishlist-check hidden" id="wishlist-popup"></div>
+					</li>
+
+					<li class="hub-i hub-i-comparison" id="comparison-header">
+						<div name="splash-button" id="comparison">   <a href="#" class="hub-i-link hub-i-link-empty hub-i-comparison-link sprite-side whitelink" onclick="return false;"> <span class="underline-hover">Сравнение</span> </a> </div>
+						<div name="splash-popup" class="header-popup-comparison-check hidden" id="comparison-popup"><div class="header-popup header-popup-comparison-empty sprite-side "> <h3 class="header-popup-info-title">Нет товаров в&nbsp;сравнении</h3> <p class="header-popup-info-title-under">Добавляйте товары к&nbsp;сравнению характеристик<br> и&nbsp;выбирайте самый подходящий вам товар</p> </div></div>
+					</li>
+
+					<li class="hub-i hub-i-loyalty" id="program-loyalty-header">
+						<div name="splash-button" id="program-loyalty-header_btn">   <a href="https://my.rozetka.com.ua/profile/bonus/" class="hub-i-link hub-i-loyalty-link-active sprite-side whitelink" name="splash-button-disable">  <span class="underline-hover">Бонусы</span>  </a>   </div>
+						<div name="splash-popup" class="header-popup-loyalty-check hidden" id="program-loyalty-popup">  <div class="header-popup header-popup-loyalty-active sprite-side">    <p class="header-popup-loyalty-bill header-popup-loyalty-bill-available">  0<span class="header-popup-loyalty-bill-uah">&nbsp;бонусов</span> </p> <p class="header-popup-loyalty-info-available">доступно для использования</p> <p class="header-popup-loyalty-info-text">Накапливайте бонусы и&nbsp;используйте их&nbsp;при оплате своих покупок!</p>   </div>  </div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="body-header-shadow" name="header-shadow"></div>
+<div class="content" id="head_banner_container">
+	<div class="content-inner body-layout-large" id="content-inner-block">
+		<div id="popup_from_vkontakte"></div>
+		<a href="#" class="scroll-top-btn hidden" id="scroll-top-button" onclick="document.fireEvent('scrollToTopClick');">
+			<img src="https://i.rozetka.ua/design/_.gif" class="scroll-top-btn-icon sprite" width="15" height="16" alt="▲">
+		</a>
+		<div class="body-layout">
+			<div class="clearfix wrap container" itemscope="" itemtype="http://schema.org/Product">
+				<header class="detail-heading">
+					<div class="fat-menu-width-breadcrumbs clearfix">
+						<nav class="m-main" name="nav-m-main">
+							<a href="#" class="btn-link btn-link-gray m-main-btn-link sprite-side" id="fat_menu_btn">
+								<span class="btn-link-i">Каталог товаров</span>
+							</a>
+						</nav>
+					</div>
+				</header>
+			</div>
+		</div>
+		<div class="travel-container">
+			<div class="body-layout">
+				<div class="wrap">
+					<div class="menu">
+						<ul class="m-tabs">
+							<li class="m-tabs-i">
+								<a class="m-tabs-link active novisited m-tabs-i-link" href="#">Авиабилеты 0% комиссии</a>
+							</li>
+							<li class="m-tabs-i">
+								<a class="m-tabs-link novisited m-tabs-i-link" href="#">Ж/д-билеты</a>
+							</li>
+							<li class="m-tabs-i">
+								<a class="m-tabs-link novisited m-tabs-i-link" href="#">Расписание аэропортов</a>
+							</li>
+						</ul>
+						<form class="form-air">
+							<div class="form-air-radio">
+								<label>
+									<input type="radio" class="input-radio" name="input-air" checked="checked">
+									<span class="input-check-radio-inner form-air-check">Туда и обратно</span>
+								</label>
+								<label>
+									<input type="radio" class="input-radio" name="input-air">
+									<span class="input-check-radio-inner form-air-check">В одну сторону</span>
+								</label>
+								<label>
+									<input type="radio" class="input-radio" name="input-air">
+									<span class="input-check-radio-inner form-air-check">Составной маршрут</span>
+								</label>
+							</div>
+							<div class="form-air-town">
+								<div class="form-air-town-block">
+									<div class="form-air-town-block-inner ui-widget">
+										<div class="form-air-town-t">Город вылета</div>
+										<input type="text" id="tags1"class="form-air-town-field input-textarea" placeholder="Откуда" required="required">
+									</div>
+									<a href="#" class="form-air-town-btn"></a>
+									<div class="form-air-town-block-inner ui-widget">
+										<div class="form-air-town-t">Город назначения</div>
+										<input type="text" id="tags2"class="form-air-town-field input-textarea" placeholder="Куда" required="required">
+									</div>
+								</div>
+								<div class="form-air-town-block">
+									<div class="form-air-town-block-inner">
+										<div class="form-air-town-t">Дата вылета</div>
+										<p><input type="text" id="datepicker1" class="form-air-town-field input-textarea" placeholder="Туда" required="required"></p>
+									</div>
+									<div class="form-air-town-block-inner">
+										<div class="form-air-town-t">Дата вылета</div>
+										<p><input type="text" id="datepicker2" class="form-air-town-field input-textarea" placeholder="Обратно" required="required"></p>
+									</div>
+								</div>
+							</div>
+							<div class="form-air-nmb">
+								<div class="form-air-nmb-inner">
+									<div class="form-air-nmb-t">Взрослый</div>
+									<select class="form-air-nmb-block" name="number" id="number1">
+										<option>1</option>
+										<option selected="selected">2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</div>
+								<div class="form-air-nmb-inner">
+									<div class="form-air-nmb-t">Детский</div>
+									<select class="form-air-nmb-block" name="number" id="number2">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option selected="selected">4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</div>
+								<div class="form-air-nmb-inner">
+									<div class="form-air-nmb-t">Ребенок</div>
+									<select class="form-air-nmb-block" name="number" id="number3">
+										<option selected="selected">1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</div>
+							</div>
+							<div class="form-air-radio-wrap">
+							<div class="form-air-radio-class">Класс перелета</div>
+							<div class="form-air-radio">
+								<label for="route4">
+									<input type="radio" class="input-radio" id="route4" name="class" checked="checked">
+									<span class="input-check-radio-inner form-air-check">Эконом</span>
+								</label>
+								<label for="route5">
+									<input type="radio" class="input-radio" id="route5" name="class">
+									<span class="input-check-radio-inner form-air-check">Бизнесс</span>
+								</label>
+								<label for="route6">
+									<input type="radio" class="input-radio" id="route6" name="class">
+									<span class="input-check-radio-inner form-air-check">Любой</span>
+								</label>
+							</div>
+							</div>
+							<div class="form-air-btn-wrap">
+								<button type="submit" class="btn-link-green btn-link form-air-btn">Найти билеты</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="body-layout">
+			<div class="wrap">
+				<div class="banner">
+					<div class="banner-head">Популярные направления перелетов</div>
+					<div class="banner-block clearfix">
+						<div class="banner-block-col">
+							<ul class="banner-block-l">
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-img-link">
+										<img class="banner-block-l-i-img" alt="" src="images/avia-2014.06.jpg">
+										<div class="banner-block-l-i-t">
+											<span class="banner-block-l-i-t-city">Барселона</span>
+											<span class="banner-block-l-i-t-country">Испания</span>
+										</div>
+									</a>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Киева</a>
+									<span class="banner-block-l-i-cost">от 1 700 грн.</span>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Львова</a>
+									<span class="banner-block-l-i-cost">от 1 270 грн.</span>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Харькова</a>
+									<span class="banner-block-l-i-cost">от 2 150 грн.</span>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Одессы</a>
+									<span class="banner-block-l-i-cost">от 1 680 грн.</span>
+								</li>
+							</ul>
+						</div>
+						<div class="banner-block-col">
+							<ul class="banner-block-l">
+								<li>
+									<a class="banner-block-l-i-img-link">
+										<img class="banner-block-l-i-img" alt="" src="images/avia-2014.07.jpg">
+										<div class="banner-block-l-i-t">
+											<span class="banner-block-l-i-t-city">Тиват</span>
+											<span class="banner-block-l-i-t-country">Черногория</span>
+										</div>
+									</a>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Киева</a>
+									<span class="banner-block-l-i-cost">от 1 200 грн.</span>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Львова</a>
+									<span class="banner-block-l-i-cost">от 970 грн.</span>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Днепропетровска</a>
+									<span class="banner-block-l-i-cost">от 2 150 грн.</span>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Харькова</a>
+									<span class="banner-block-l-i-cost">от 1 680 грн.</span>
+								</li>
+							</ul>
+						</div>
+						<div class="banner-block-col">
+							<ul class="banner-block-l">
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-img-link">
+										<img class="banner-block-l-i-img" alt="" src="images/avia-2014.08.jpg">
+										<div class="banner-block-l-i-t">
+											<span class="banner-block-l-i-t-city">Бургас</span>
+											<span class="banner-block-l-i-t-country">Болгария</span>
+										</div>
+									</a>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Киева</a>
+									<span class="banner-block-l-i-cost">от 1 270 грн.</span>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Днепропетровска</a>
+									<span class="banner-block-l-i-cost">от 1 450 грн.</span>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Львова</a>
+									<span class="banner-block-l-i-cost">от 1 680 грн.</span>
+								</li>
+								<li class="banner-block-l-i">
+									<a class="banner-block-l-i-link novisited" href="#">Из Одессы</a>
+									<span class="banner-block-l-i-cost">от 1 320 грн.</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="promotion">
+					<div class="promotion-head">Акции и спецпредложения!</div>
+					<div class="promotion-block clearfix">
+						<a class="promotion-block-i" href="#">
+							<img class="promotion-block-i-img" src="images/avia-2014.09.jpg" alt="" height="250" width="300">
+						</a>
+						<a class="promotion-block-i" href="#">
+							<img class="promotion-block-i-img" src="images/avia-2014.10.jpg" alt="" height="250" width="300">
+						</a>
+						<a class="promotion-block-i" href="#">
+							<img class="promotion-block-i-img" src="images/avia-2014.11.jpg" alt="" height="250" width="300">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer class="body-footer" id="body-footer" role="contentinfo">
+	<div id="body-footer-content">
+		<div class="body-layout">
+			<div class="wrap clearfix">
+				<div class="clearfix">
+					<div class="grid-col4">
+						<div class="grid-box">
+							<div class="copy"> ©&nbsp;Интернет-магазин «Розетка™»
+								<nobr>2001–2017</nobr>
+							</div>
+							<div class="copy-remark">
+								ТМ используется на основании лицензии<br>правообладателя RozetkaLTD
+							</div>
+							<ul class="schedule-l">
+								<li class="schedule-l-i">
+									<a href="https://rozetka.com.ua/contacts/" class="novisited">График работы Call-центра</a>
+								</li>
+								<li class="schedule-l-i">В&nbsp;будние дни с&nbsp;8&nbsp;до&nbsp;21</li>
+								<li class="schedule-l-i">Суббота с&nbsp;9&nbsp;до&nbsp;20</li>
+								<li class="schedule-l-i">Воскресенье с&nbsp;10&nbsp;до&nbsp;19</li>
+							</ul>
+						</div>
+					</div>
+					<div class="grid-col4 footer-col-second">
+						<div class="grid-box">
+							<ul class="clearfix">
+								<li class="footer-l-i" name="page_loyalty">
+									<a href="https://rozetka.com.ua/loyalty/" class="novisited">Бонусный счёт</a>
+								</li>
+								<li class="footer-l-i" name="page_gift">
+									<a href="https://rozetka.com.ua/gift/" class="novisited">Подарочные сертификаты</a>
+								</li>
+							</ul>
+							<ul class="footer-l">
+								<li class="footer-l-i">
+									<a class="novisited" href="http://service.rozetka.com.ua/">Возврат товара</a>
+								</li>
+								<li class="footer-l-i">
+									<a href="https://rozetka.com.ua/service-centers/" class="novisited">Сервисные центры</a>
+								</li>
+								<li class="footer-l-i">
+									<a href="https://rozetka.com.ua/faq/" class="novisited">Вопросы и ответы</a>
+								</li>
+								<li class="footer-l-i">
+									<a class="novisited sprite-side footer-feedback-link" id="problem_with_order" href="https://rozetka.com.ua/order-problem/">
+										<span class="xhr">Проблемы с&nbsp;заказом</span>
+									</a>
+								</li>
+								<li class="footer-l-i">
+									<a class="novisited sprite-side footer-feedback-link" id="feedback" href="https://rozetka.com.ua/feedback/">
+										<span class="xhr">Обратная связь</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="grid-col4">
+						<div class="grid-box">
+							<ul class="footer-l">
+								<li class="footer-l-i">
+									<a href="https://rozetka.com.ua/about/" class="novisited">О нас</a>
+								</li>
+								<li class="footer-l-i">
+									<a href="https://rozetka.com.ua/contacts/" class="novisited">Контакты</a>
+								</li>
+								<li class="footer-l-i">
+									<a href="https://rozetka.com.ua/partnership/" class="novisited">Сотрудничество с нами</a>
+								</li>
+								<li class="footer-l-i">
+									<a href="https://rozetka.com.ua/newseller/" class="novisited"> Продавать на Розетке </a>
+								</li>
+								<li class="footer-l-i">
+									<a href="https://rozetka.com.ua/jobs/" class="novisited">Вакансии</a>
+								</li>
+								<li class="footer-l-i">
+									<a href="https://rozetka.com.ua/terms/" class="novisited">Условия использования сайта</a>
+								</li>
+								<li class="footer-l-i">
+									<a class="novisited" href="https://cardtocard.rozetka.com.ua/">Перевод денег с карты на карту</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="grid-col4 footer-col-fourth">
+						<div id="footer_subscription" class="newsletter-subscription">
+							<div name="app-message" class="newsletter-subscription-message">
+							</div>
+							<form name="subscribe_form" action="/cgi-bin/form.php?action=subscribeByEmail&amp;r=https://my.rozetka.com.ua/subscribe/" method="post" class="hidden">
+								<div class="newsletter-subscription-text">
+									Подпишитесь и&nbsp;получайте новости об&nbsp;акциях и&nbsp;специальных предложениях
+								</div>
+								<div class="newsletter-subscription-inner inline">
+									<input type="text" name="email" _pattern="^.+@.+\..+$" _required="required" class="input-text newsletter-subscription-input" placeholder="Ваш e-mail" readonly="">
+									<div name="email_hint_block" class="hidden">
+									</div>
+								</div>
+									<span class="btn-link btn-link-blue newsletter-subscription-btn inline" name="subscribe_btn_block">
+										<button class="btn-link-i" type="submit">Подписаться</button>
+									</span>
+								<input type="hidden" name="request_token" value="rB4eClnGmfZKmXcdEd24Ag==">
+							</form>
+						</div>
+						<div class="grid-box clearfix">
+							<a href="/go/http://www.owox.ua/?utm_source=rozetka&amp;utm_medium=referral&amp;utm_campaign=footer" class="logo-owox-link" target="_blank">
+								<img class="logo-owox-icon" src="https://i.rozetka.ua/design/_.gif" width="110" height="19" alt="OWOX" title="OWOX">
+									<span class="logo-owox-slogan">Интернет-магазин разработан<br>и&nbsp;поддерживается
+										<span class="owox-slogan-company">в&nbsp;компании&nbsp;OWOX</span>
+									</span>
+								<span class="logo-owox-support-time">2010–2017</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
